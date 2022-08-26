@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/documentos', [DocumentoController::class, 'store']);
-Route::put('/documentos/{id}', [DocumentoController::class, 'update']);
-Route::delete('/documentos/{id}', [DocumentoController::class, 'destroy']);
+Route::put('/documentos/{documento}', [DocumentoController::class, 'update']);
+Route::delete('/documentos/{documento}', [DocumentoController::class, 'destroy']);
 
-Route::get('/tipos', TipoDocumentoController::class);
+Route::get('/tipos', [TipoDocumentoController::class, 'index']);

@@ -18,4 +18,7 @@ Route::get('/', function () {
     return to_route('documentos.index');
 });
 
-Route::resource('/documentos', DocumentoController::class);
+Route::get('/documentos', [DocumentoController::class, 'index'])->name('documentos.index');
+Route::get('/documentos/create', [DocumentoController::class, 'create'])->name('documentos.create');
+Route::get('/documentos/{documento}', [DocumentoController::class, 'show'])->name('documentos.show');
+Route::get('/documentos/{documento}/edit', [DocumentoController::class, 'edit'])->name('documentos.edit');
