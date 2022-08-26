@@ -5,9 +5,8 @@
                 <legend class="d-flex justify-content-center">Editar</legend>
 
                 <div class="d-flex justify-content-center">
-                    <p id="erro">Dados incompletos ou arquivo já existente, por favor tente novamente.</p>
+                    <p id="erro">Dados incompletos ou arquivo já existente.</p>
                 </div>
-
                 <div class="mb-3">
                     <label for="titulo" class="form-label">Título:</label>
                     <input type="text" class="form-control" id="titulo" name="titulo" value="{{ $documento->titulo }}">
