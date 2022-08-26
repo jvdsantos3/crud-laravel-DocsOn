@@ -20,6 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/documentos', DocumentoController::class);
+Route::post('/documentos', [DocumentoController::class, 'store']);
+Route::put('/documentos/{id}', [DocumentoController::class, 'update']);
+Route::delete('/documentos/{id}', [DocumentoController::class, 'destroy']);
 
-Route::apiResource('/tipos', TipoDocumentoController::class);
+Route::get('/tipos', TipoDocumentoController::class);
